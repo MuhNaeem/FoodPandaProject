@@ -89,13 +89,13 @@ public class UpdateMenu extends AppCompatActivity {
 
         if(!TextUtils.isEmpty(id) && !TextUtils.isEmpty(name) && !TextUtils.isEmpty(price)){
             StorageReference filepath = storagereference.child(uri.getLastPathSegment());
-            filepath.putFile(uri);/*.addOnSuccessListener(new onSuccessListener<UploadTask.TaskSnapshot>(){
+            filepath.putFile(uri);.addOnSuccessListener(new onSuccessListener<UploadTask.TaskSnapshot>(){
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot){
                     final Uri downloadurl = taskSnapshot.getDownloadUrl();
                     Toast.makeText(UpdateMenu.this,"Image Uploaded",Toast.LENGTH_LONG).show();
                 }
-            });*/
+            });
         }
 
     }
